@@ -1,0 +1,41 @@
+QuickDBD code
+
+departments
+-
+dept_no VARCHAR(30) PK
+dept_name VARCHAR(30)
+
+
+dept_emp
+-
+emp_no BIGINT FK >- employees.emp_no
+dept_no VARCHAR(30) FK >- departments.dept_no
+
+
+dept_manager
+-
+dept_no VARCHAR(30) FK >- departments.dept_no
+emp_no BIGINT FK - employees.emp_no
+
+
+employees
+-
+emp_no BIGINT PK
+emp_title_id VARCHAR(30) FK >- titles.title_id
+birth_date VARCHAR(30)
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+sex VARCHAR(30)
+hire_date VARCHAR(30)
+
+
+salaries
+-
+emp_no BIGINT FK - employees.emp_no
+salary BIGINT
+
+
+titles
+-
+title_id VARCHAR(30) PK
+title VARCHAR(30)
